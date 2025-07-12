@@ -1,0 +1,1018 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+html {
+  scroll-behavior: smooth; /* ✅ Makes scrolling feel polished! */
+}
+
+:root{
+     --text-color:#4B3F30; 
+     --hover-color:#d39b47; 
+     --bg-color:#f3e3a1; 
+     --secon-bg-color:#808080; 
+     --big-font:2.5rem; 
+     --norma-font:2rem; 
+     --neon-box-shadow:0 0 .5rem rgba(75, 63, 48, 0.3); 
+     --h2-font:3rem; 
+     --font-neon-text-shadow:0 0 10px rgba(75, 63, 48, 0.5); }
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: var(--bg-color);
+    color:var(--text-color);
+}
+
+header{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 100%;
+   padding: 20px 10%;
+   background-color:var(--bg-color);
+  }
+ .logo{ 
+     font-size: 26px;
+     font-weight: 700;
+     letter-spacing: 1px;
+   } 
+ span{ 
+    color: var(--hover-color);
+    font-size: 2.2rem;
+   }
+.nav {
+    display: flex;
+    gap: 20px; /* Adds spacing between items */
+}
+
+.nav li {
+    position: relative;
+}
+
+.nav a {
+    position: relative;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    color: var(--text-color);
+    background: transparent; /* No box until hover */
+}
+
+.nav a:hover {
+    background: rgba(209, 160, 84, 0.25); /* Softer transition with refined opacity */
+    box-shadow: 0 5px 15px rgba(209, 160, 84, 0.4); /* Smooth glowing shadow */
+    transform: translateY(-2px); /* Subtle hover lift */
+    color: rgb(208, 141, 42); /* Warm readable text */
+    opacity: 0.9; /* Makes hover effect feel softer */
+}
+
+/* Soft glowing outline */
+.nav a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    border: 2px solid transparent;
+    transition: all 0.4s ease-in-out;
+    opacity: 0; /* Initially invisible */
+}
+
+.nav a:hover::after {
+    border-color: rgba(209, 160, 84, 0.8); /* Softer glowing border */
+    box-shadow: 0px 0px 12px rgba(209, 160, 84, 0.5); /* Balanced outer glow */
+    opacity: 1; /* Gradual appearance */
+}
+
+
+.menu-icon{
+   font-size: 1.5rem; 
+   display: none;
+   margin-left: 25px;
+   background:var(--hover-color);
+   border-radius: 2px;
+   color: var(--secon-bg-color);
+ } 
+ section{
+   padding: 60px 10%; 
+  } 
+ .firstSection{ 
+   min-height: 100vh;
+   height: 100%; width: 100%;
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   align-items: center;
+   grid-gap: 4cm;
+   background-color: var(--bg-color); /* Fix background */
+ }
+ .leftSection{
+   max-width: 600px;
+   }
+.leftSection h1{
+   font-size: var(--big-font); 
+   font-weight: 800; 
+} 
+
+.leftSection p{
+   color:var(--text-color); 
+   line-height: 1.6; 
+}
+
+.custom-button {
+    background: linear-gradient(to right, #6B4226, #3D2C1E); 
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover Effect */
+.custom-button:hover {
+    transform: scale(1.08);
+    background: linear-gradient(to right, #3D2C1E, #6B4226); /* Reverse gradient */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+.coffee-box { 
+  position: relative; 
+  padding: 20px; 
+  background: transparent; /* No solid box */ 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+ }
+ 
+.coffee-box img { 
+  
+ border-radius: 10px; /* Keeps image refined */ 
+ box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.2); /* Sleek depth effect */ 
+ border: 3px solid rgba(255, 255, 255, 0.25); /* Thin stylish outline */ 
+}
+.coffee-box img {
+    width: 80%;  /* Instead of fixed width */
+    max-width: 300px; /* Prevents oversized images */
+    height: auto; /* Keeps proportions correct */
+    display: block;
+    margin: auto; /* Centers it nicely */
+}
+
+/* Popup Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #F8E8C4; /* Cream Yellow */
+  padding: 25px;
+  width: 300px; /* Compact & sleek */
+  height: auto; /* Adjust height dynamically */
+  border-radius: 12px;
+  box-shadow: 0px 6px 16px rgba(0,0,0,0.2);
+  z-index: 9999; /* Popup always above everything */
+}
+
+.modal-heading {
+  font-size: 22px;
+  font-weight: bold;
+  color: #6B4226;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Unified layout */
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  font-size: 16px;
+  margin-bottom: 15px;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+}
+
+.center-btn {
+  background: #F8E8C4;
+  color: #6B4226;
+  padding: 12px 20px;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  margin-top: 15px;
+  border: 2px solid #6B4226;
+}
+
+/* Result inside same box */
+#coffee-result {
+  font-size: 18px;
+  font-weight: 600;
+  color: #6B4226;
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* 🌟 Optimized Mobile Responsiveness */
+@media (max-width: 1024px) {
+    header {
+        padding: 15px 5%;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .firstSection {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 50px 5%;
+    }
+
+    .leftSection {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .leftSection h1 {
+        font-size: 2rem;
+    }
+
+    .leftSection p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .coffee-box {
+        order: 2;
+        display: flex;
+        justify-content: center;
+    }
+
+    .coffee-box img {
+        width: 90%;
+        max-width: 300px;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .custom-button {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .firstSection {
+        padding: 40px 3%;
+    }
+
+    .nav a {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .modal {
+        width: 260px;
+        padding: 20px;
+    }
+
+    .modal-heading {
+        font-size: 18px;
+    }
+
+    select,
+    .center-btn {
+        font-size: 14px;
+    }
+}
+
+/* 🌟 Coffee Journey Section----------------------------------------------------------------- */
+#coffee-journey {
+    text-align: center;
+    padding: 60px 10%;
+    background-color: #48321a; /* Deep Coffee Brown */
+    color: #D4A373; /* Warm Golden Text */
+}
+
+/* Video Section */
+#coffee-video {
+    position: relative;
+    padding: 40px;
+    background-color: #48321a;
+}
+
+.video-text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    max-width: 500px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#coffee-video h2 {
+    font-size: 28px;
+    color: #FFD700; /* Golden */
+}
+
+#coffee-video p {
+    font-size: 18px;
+    color: #F5E3C5;
+}
+
+video {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Coffee Journey Steps */
+.step {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.step.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.step img {
+    width: 280px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.text {
+    max-width: 450px;
+    padding-left: 20px;
+    font-size: 18px;
+    color: #F5E3C5;
+}
+
+/* 🌟 Mobile Adjustments */
+@media (max-width: 768px) {
+    #coffee-journey {
+        padding: 40px 5%;
+    }
+
+    .step {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .step img {
+        width: 80%;
+        max-width: 250px;
+    }
+
+    .text {
+        max-width: 100%;
+        padding-left: 0;
+        font-size: 16px;
+    }
+
+    video {
+        width: 90%;
+    }
+
+    .video-text-container {
+        width: 80%;
+        padding: 10px;
+    }
+}
+
+#about {
+    text-align: center;
+    padding: 100px 12%;
+    background: linear-gradient(to right, #613c19, #a76f44);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Adding Floating Coffee Beans Effect */
+#about::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: url('images/coffee-beans.png') no-repeat center;
+    background-size: contain;
+    opacity: 0.2;
+    top: -50px;
+    left: -100px;
+    animation: float 6s infinite linear;
+}
+
+#about::after {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: url('images/coffee-beans.png') no-repeat center;
+    background-size: contain;
+    opacity: 0.2;
+    bottom: -50px;
+    right: -100px;
+    animation: float 8s infinite linear reverse;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(20px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Heading - Smooth Hover Effect */
+.about-heading h2 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #ffcc80;
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-heading h2:hover {
+    transform: scale(1.05);
+}
+
+.about-image img {
+    max-width: 380px; /* Reduce the image size */
+    height: 300px; /* Maintain aspect ratio */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Ensure Flexbox Balances the Image & Text */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Add some space between tagline & content */
+.about-heading p {
+    font-size: 22px;
+    font-weight: 300;
+    opacity: 0.9;
+    margin-bottom: 40px; /* Extra space below the tagline */
+}
+
+
+.about-image img:hover {
+    transform: scale(1.08);
+}
+
+/* Text Styling */
+.about-text {
+    max-width: 500px;
+    text-align: left;
+}
+
+.about-text h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffd180;
+}
+
+/* Paragraph */
+.about-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+/* Button - Animated Hover */
+.about-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 32px;
+    font-size: 18px;
+    background: #ff9800;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.about-btn:hover {
+    background: #f57c00;
+    transform: scale(1.1);
+}
+/* Popup Modal Styling */
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    backdrop-filter: blur(6px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.popup-container.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.popup-content img {
+    width: 150px;
+    border-radius: 10px;
+}
+/* 🌟 Optimized Mobile Responsiveness */
+@media (max-width: 1024px) {
+    #about {
+        padding: 80px 8%;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .about-image img {
+        width: 80%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .about-text {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .about-text h3 {
+        font-size: 22px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+
+    .about-btn {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    #about {
+        padding: 60px 5%;
+    }
+
+    .about-heading h2 {
+        font-size: 24px;
+    }
+
+    .about-heading p {
+        font-size: 16px;
+    }
+
+    .about-image img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+    }
+
+    .about-text h3 {
+        font-size: 20px;
+    }
+
+    .about-text p {
+        font-size: 14px;
+    }
+
+    .about-btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+
+/* 🌟 Menu Section */
+#menu {
+    text-align: center;
+    padding: 60px 10%;
+    background: linear-gradient(to bottom, #d8a518, #97650f);
+    color: #3D2C1E;
+}
+
+/* Menu Categories */
+.menu-category {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Menu Items */
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: #E3C092;
+    border-radius: 14px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+/* Hover Effects */
+.menu-item:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+    background: #E2C6A6;
+}
+
+/* Menu Images */
+.menu-item img {
+    width: 180px;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Text Details */
+.details {
+    text-align: left;
+    padding-left: 15px;
+}
+
+.details h4 {
+    font-size: 22px;
+    color: #3D2C1E;
+}
+
+.details p {
+    font-size: 18px;
+    color: #6B4F34;
+}
+
+.details span {
+    background: #D4A373;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+/* Popup Modal */
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.popup-container.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #menu {
+        padding: 50px 5%;
+    }
+
+    .menu-category {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 16px;
+    }
+
+    .menu-item img {
+        width: 150px;
+    }
+
+    .details h4 {
+        font-size: 20px;
+    }
+
+    .details p {
+        font-size: 16px;
+    }
+
+    .details span {
+        font-size: 16px;
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    #menu {
+        padding: 40px 5%;
+    }
+
+    .menu-category {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-item img {
+        width: 140px;
+    }
+
+    .details h4 {
+        font-size: 18px;
+    }
+
+    .details p {
+        font-size: 14px;
+    }
+
+    .details span {
+        font-size: 14px;
+        padding: 5px 8px;
+    }
+}
+/* 🌟 Brews & Review Section */
+#brews-review {
+    text-align: center;
+    padding: 60px 10%;
+    background-color: rgb(238, 191, 90); /* Cozy Coffee Beige */
+    color: #241c13; /* Warm Golden Text */
+}
+
+/* Review Container */
+.reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Individual Review Styling */
+.review {
+    width: 250px;
+    background-color: #F5E3C5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.review:hover {
+    transform: scale(1.05);
+}
+
+/* Reviewer Images */
+.review img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Review Text Styling */
+.review-text h3 {
+    font-size: 22px;
+    color: #3E2C17;
+}
+
+.review-text p {
+    font-size: 16px;
+    color: #4F3D2E;
+}
+
+/* Star Ratings */
+.rating {
+    display: block;
+    margin-top: 5px;
+    font-size: 18px;
+    color: #FFD700; /* Golden Stars */
+}
+
+/* 🌟 Responsive Adjustments */
+@media (max-width: 1024px) {
+    #brews-review {
+        padding: 50px 8%;
+    }
+
+    .reviews-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 16px;
+    }
+
+    .review {
+        width: 100%;
+        max-width: 230px;
+        padding: 18px;
+    }
+
+    .review img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .review-text h3 {
+        font-size: 20px;
+    }
+
+    .review-text p {
+        font-size: 15px;
+    }
+
+    .rating {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    #brews-review {
+        padding: 40px 5%;
+    }
+
+    .reviews-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .review {
+        width: 45%;
+        max-width: 200px;
+        padding: 15px;
+    }
+
+    .review img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .review-text h3 {
+        font-size: 18px;
+    }
+
+    .review-text p {
+        font-size: 14px;
+    }
+
+    .rating {
+        font-size: 14px;
+    }
+}
+/* 🌟 Contact Section */
+#contact {
+    text-align: center;
+    padding: 60px 10%;
+    background-color: #3D2C1E; /* Coffee Brown */
+    color: #F5E3C5; /* Light Beige */
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #D4A373;
+    border-radius: 8px;
+    background: #F5E3C5;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #FFD700;
+}
+
+/* Submit Button */
+.contact-form button {
+    padding: 12px 20px;
+    font-size: 18px;
+    background: #D4A373;
+    color: #3D2C1E;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+    background: #c49a10;
+    color: #fff;
+}
+
+/* 🌟 Footer Section */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #2C1B11;
+    color: #F5E3C5;
+    font-size: 16px;
+}
+
+/* Social Links */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    font-size: 22px;
+    color: #FFD700;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: #f4f4d7;
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+/* 🌟 Responsive Adjustments */
+@media (max-width: 768px) {
+    #contact {
+        padding: 40px 5%;
+    }
+
+    .contact-form {
+        max-width: 400px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+
+    .social-icons a {
+        font-size: 20px;
+    }
+}

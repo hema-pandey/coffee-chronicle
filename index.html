@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <title>Coffee Chronical Website</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+   <!-- header -->
+    <header>
+       <div class="logo"><span>C</span>offee.</div>
+      <ul class="nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#coffee-journey">Coffee Journey</a></li>
+        <li><a href="#about">About us</a></li>
+        <li><a href="#Menu">Menu</a></li>
+        <li><a href="#brews-review">Brews and Review</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+       <div class="menu-icon"> <i class="fa-solid fa-bars"></i> </div>
+    </header>
+   
+    <!-- Home Section----------------------------------------------------------->
+  
+     <section id="home"  class ="firstSection">
+         <div class="leftSection">
+           <h1>The Essence of coffee ☕ </h1>
+           <p>Coffee is more than just a drink-it's an experience, a ritual and  a moment of connection. From the rich aroma of freshly ground beans to the soothing warmth of a perfectly brewed cup, every sips carries a story. It's a journey through time, tracing the origins of coffee from ancient traditions to modern innovations. Whether it's the comforting embrace of a morning espresso or the indulgence of a creamy latte, coffee has the power to awaken the senses, spark conversations, and fuel creativity. Welcome to Coffee Chronicles- where every cup is an invitation to explore, savor, and celebrate the essence of coffee. </p>
+           <br>
+           <div class="buttons">
+ 
+
+<!-- AI Coffee Suggestion Button -->
+
+<!-- AI Coffee Suggestion Button -->
+<button class="custom-button" id="btn">Need Coffee Suggestion!</button>
+
+<!-- Popup Modal (Unified Box Layout) -->
+<div id="popup-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 class="modal-heading">Select Coffee with Your Mood & Time ☕</h2>
+
+    <label for="mood">Your Mood:</label>
+    <select id="mood">
+      <option value="energetic">Energetic ⚡</option>
+      <option value="relaxed">Relaxed 🌿</option>
+      <option value="focused">Focused 🧐</option>
+      <option value="sleepy">Sleepy 😴</option>
+    </select>
+
+    <label for="time">Time of Day:</label>
+    <select id="time">
+      <option value="morning">Morning 🌅</option>
+      <option value="evening">Evening 🌙</option>
+    </select>
+
+    <!-- Get Coffee Suggestion Button (Inside the same box) -->
+    <button id="get-coffee" class="center-btn">Get Coffee Suggestion!</button>
+
+    <!-- Result will also appear INSIDE the same box -->
+    <p id="coffee-result"></p>
+  </div>
+</div>
+
+
+        </div>
+        
+         </div>
+         <div class="rightSection coffee-box">    
+         <img src= "coffee.jpg" alt="Coffee" width="80%">
+         </div>
+     </section>
+
+      
+    <!-- Coffee Jorney Section-->
+      <section id="coffee-journey">
+    <div id="coffee-video">
+        <div class="video-text-container">
+            <h2>The Coffee Journey Begins</h2>
+        <p>Follow the transformation from raw beans to the perfect cup!</p>
+        </div>
+        <video id="coffeeVideo" autoplay muted playsinline>
+            <source src="coffe.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+        <div class="step">
+            <img src="coffee 1.jpg" alt="Coffee Beans">
+            <div class="text">
+                <h3>Step 1: Coffee Beans</h3>
+                <p>Every great coffee starts with premium beans, carefully selected and roasted to bring out their rich flavors.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <img src="coffee 2.jpg" alt="Black Coffee">
+            <div class="text">
+                <h3>Step 2: The Black Brew</h3>
+                <p>Hot water is poured over the ground beans, extracting the deep, bold essence of coffee.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <img src="coffee 3.jpg" alt="Coffee Foam">
+            <div class="text">
+                <h3>Step 3: The Light Foam</h3>
+                <p>A beautiful white froth forms, creating the velvety texture that enhances the experience.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <img src="coffee5.webp" alt="Adding Milk">
+            <div class="text">
+                <h3>Step 4: Adding Milk</h3>
+                <p>The smooth creaminess of milk blends with the dark coffee, balancing bitterness with richness.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <img src="coffe 5.jpg" alt="Coffee Ready">
+            <div class="text">
+                <h3>Step 5: Ready to Enjoy</h3>
+                <p>The perfect cup of coffee is now complete—ready to sip, savor, and enjoy!</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- About us Section -->
+
+   <section id="about">
+    <div class="about-heading">
+        <h2>☕ Meet Coffee Chronicles</h2>
+        <p>Your daily dose of inspiration, one brew at a time.</p>
+    </div>
+      
+    <div class="about-content">
+        <div class="about-image">
+            <img src="image.png" alt="Premium Coffee Beans">
+        </div>
+        
+        <div class="about-text">
+            <h3>More Than Coffee, It’s a Culture</h3>
+            <p>At Coffee Chronicles, we craft each cup with passion and precision. From rich espresso to velvety lattes, every sip takes you on a journey of **flavor, aroma, and artistry**.</p>
+            <p>Step into a world of hand-selected beans, expert brewing, and unforgettable moments.</p>
+            <a href="#contact" class="about-btn">Start Your Coffee Journey</a>
+        </div>
+    </div>
+</section>
+
+
+
+  
+     <!-- MENU Section -->
+    
+     <section id="Menu">
+        <h2>Explore Our Café Menu</h2>
+        <p>From rich coffee to delicious snacks—find your perfect match.</p>
+       <br>
+        <!-- Coffee Specialties -->
+        <h3>Coffee Specialties</h3>
+        <br>
+        <div class="menu-category">
+            <div class="menu-item" onclick="showPopup('expresso.webp', 'Espresso', 'Strong, bold coffee shot.', '₹150')">
+                <img src="expresso.webp" alt="Espresso">
+            </div>
+            <div class="menu-item" onclick="showPopup('cold-brew.webp', 'Cold Brew', 'Slow-steeped coffee served ice cold.', '₹200')">
+                <img src="cold-brew.webp" alt="Cold Brew">
+            </div>
+            <div class="menu-item" onclick="showPopup('cappicino.webp', 'Cappuccino', 'Smooth espresso with frothy milk.', '₹180')">
+                <img src="cappicino.webp" alt="Cappuccino">
+            </div>
+        
+        </div>
+           <br>
+           
+        <!-- Burgers & Quick Bites -->
+        <h3>Burgers & Quick Bites</h3>
+        <br>
+        <div class="menu-category">
+            <div class="menu-item" onclick="showPopup('cheese burger.jpeg', 'Cheese Burger', 'Juicy grilled burger with cheese.', '₹250')">
+                <img src="cheese burger.jpeg" alt="Cheese Burger">
+            </div>
+            <div class="menu-item" onclick="showPopup('french-fries.webp', 'French Fries', 'Crispy golden fries.', '₹100')">
+                <img src="french-fries.webp" alt="French Fries">
+            </div>
+             <div class="menu-item" onclick="showPopup('pannerburger.webp', 'Spicy Paneer Burger', 'Grilled paneer patty with spicy sauce.', '₹270')">
+        <img src="pannerburger.webp" alt="Spicy Paneer Burger">
+    </div>
+        </div>
+          <br>
+        <!-- Sweet Treats -->
+        <h3>Sweet Treats</h3>
+        <br>
+        <div class="menu-category">
+            <div class="menu-item" onclick="showPopup('choclate.jpeg', 'Chocolate Brownie', 'Rich, fudgy brownie with chocolate goodness.', '₹180')">
+                <img src="choclate.jpeg" alt="Chocolate Brownie">
+            </div>
+            <div class="menu-item" onclick="showPopup('tiramisu.jpeg', 'Tiramisu', 'Classic Italian dessert.', '₹300')">
+                <img src="tiramisu.jpeg" alt="Tiramisu">
+            </div>
+            <div class="menu-item" onclick="showPopup('bulberry cheesecake.webp', 'Blueberry Cheesecake', 'Creamy cheesecake topped with fresh blueberries.', '₹320')">
+                <img src="bulberry cheesecake.webp" alt="Blueberry Cheesecake">
+            </div>
+        </div>
+    </section>
+
+    <!-- Popup Modal -->
+    <div class="popup-container" id="popup">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <div class="popup-content">
+            <img id="popup-img" src="" alt="">
+            <h4 id="popup-title"></h4>
+            <p id="popup-description"></p>
+            <span id="popup-price"></span>
+        </div>
+    </div>
+
+    <!-- Brews and Review section  -->
+    
+  <section id="brews-review">
+    <h2>Brews & Review</h2>
+    <p>See what coffee lovers think about their favorite brews!</p>
+    <br>
+    <!-- First 4 Reviews (Always Visible) -->
+    <div class="reviews-container">
+        <div class="review">
+            <img src="Dev.jpeg" alt="Reviewer 1">
+            <div class="review-text">
+                <h3>Aaradhya</h3>
+                <p>"Espresso is bold and strong—the perfect way to start my day!"</p>
+                <span class="rating">★★★★★</span>
+            </div>
+        </div>
+
+        <div class="review">
+            <img src="Ishita.jpeg" alt="Reviewer 2">
+            <div class="review-text">
+                <h3>Aria</h3>
+                <p>"Latte is my go-to—so smooth and creamy!"</p>
+                <span class="rating">★★★★☆</span>
+            </div>
+        </div>
+
+        <div class="review">
+            <img src="Ritik.webp" alt="Reviewer 3">
+            <div class="review-text">
+                <h3>Zara</h3>
+                <p>"Cappuccino is the perfect mix of froth and rich coffee!"</p>
+                <span class="rating">★★★★☆</span>
+            </div>
+        </div>
+
+        <div class="review">
+            <img src="Tanvi.webp" alt="Reviewer 4">
+            <div class="review-text">
+                <h3>Elena</h3>
+                <p>"Mocha is heaven! Espresso and chocolate together? Yes please!"</p>
+                <span class="rating">★★★★★</span>
+            </div>
+        </div>
+    </div>
+  <br>
+    <!-- Extra 4 Reviews (Hidden Initially) -->
+    <div class="reviews-container" id="extra-reviews" style="display: none;">
+        <div class="review">
+            <img src="sarah.webp" alt="Reviewer 5">
+            <div class="review-text">
+                <h3>Tanvi</h3>
+                <p>"Filter coffee is rich, aromatic, and my absolute favorite!"</p>
+                <span class="rating">★★★★☆</span>
+            </div>
+        </div>
+
+        <div class="review">
+            <img src="man1.webp" alt="Reviewer 6">
+            <div class="review-text">
+                <h3>Vedika</h3>
+                <p>"Cold brew is refreshing and smooth—a great summer coffee!"</p>
+                <span class="rating">★★★★★</span>
+            </div>
+        </div>
+
+        <div class="review">
+            <img src="gi1.webp" alt="Reviewer 7">
+            <div class="review-text">
+                <h3>Charvi</h3>
+                <p>"Macchiato has the perfect balance of strong espresso and soft milk foam."</p>
+                <span class="rating">★★★★☆</span>
+            </div>
+        </div>
+
+        <div class="review">
+            <img src="gi2.webp" alt="Reviewer 8">
+            <div class="review-text">
+                <h3>Ishita</h3>
+                <p>"Affogato is the best dessert coffee—espresso poured over ice cream!"</p>
+                <span class="rating">★★★★★</span>
+            </div>
+        </div>
+    </div>
+   <br>
+    <!-- Toggle Button -->
+<button class="custom-button" id="explore-btn"onclick="toggleReviews()">Explore More Reviews</button>
+</section>
+
+<!-- Contact Section-------------------------------------- -->
+
+<section id="contact">
+    <h2>📬 Let's Connect Over Coffee!</h2>
+    <p>Have a question or suggestion? Drop us a message & let's chat over coffee! ☕</p>
+
+    <div class="contact-container">
+        <!-- Contact Form -->
+        <form action="#" method="POST" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+            <p><i class="fa-solid fa-map-marker-alt"></i> 📍 123 Coffee Street, Java City</p>
+            <p><i class="fa-solid fa-phone"></i> 📞 +91-9876543210</p>
+            <p><i class="fa-solid fa-envelope"></i> 📧 coffeechronicles@gmail.com</p>
+
+            <!-- Social Media Icons Below Email -->
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+       <audio id="bgMusic" src="coffee-215776.mp3" preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
+
+ 
